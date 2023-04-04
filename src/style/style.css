@@ -1,0 +1,29 @@
+/* GENERAL */
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+.header, .main, .footer {
+    margin: 1rem;
+}
+
+/* FOOTER */
+.socialPNG{
+    max-width: 50px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+.footer{
+    height: 500cm;
+}
+
+/* BUTTONS */
+.btn {
+    background-color: aqua !important;
+}
+#topButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
