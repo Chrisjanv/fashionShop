@@ -1,6 +1,6 @@
 /* GENERAL */
 *{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif !important;
     box-sizing: border-box;
 }
 
