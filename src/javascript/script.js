@@ -7,6 +7,15 @@ topButton.addEventListener("click", function () {
     });
 });
 
+// gallery
+$(document).ready(function () {
+    $(".thumbnail").click(function () {
+        var imgSrc = $(this).find("img").attr("src");
+        $("#modal-image").attr("src", imgSrc);
+    });
+});
+
+
 
 // Form tied to backend
 
