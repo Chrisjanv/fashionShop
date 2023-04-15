@@ -6,3 +6,10 @@ topButton.addEventListener("click", function () {
         behavior: "smooth"
     });
 });
+
+
+// Form tied to backend
+
+// display specials on home page from the shop page
+
+// Shop Page
