@@ -49,6 +49,15 @@ html {
 }
 
 /* GALLERY */
+main>div>div>div>img:hover {
+    transform: scale(1.2);
+    transition: transform 500ms ease-in-out ;
+}
+
+main>div>div>div>img {
+    border: none !important;
+    cursor: pointer;
+}
 
 /* on hover mouse must change pointers */
 /* zoom to 102% */
