@@ -1,3 +1,4 @@
+
 // Back to top button scrolling and functionality
 const topButton = document.getElementById("topButton");
 topButton.addEventListener("click", function () {
@@ -7,13 +8,23 @@ topButton.addEventListener("click", function () {
     });
 });
 
+// Retrieve clothing 'stock database'
+
+// Shop
+
+
+
+
+
+
+
+
+
+
+
+
 // gallery
-$(document).ready(function () {
-    $(".thumbnail").click(function () {
-        var imgSrc = $(this).find("img").attr("src");
-        $("#modal-image").attr("src", imgSrc);
-    });
-});
+
 
 
 
@@ -21,4 +32,7 @@ $(document).ready(function () {
 
 // display specials on home page from the shop page
 
-// Shop Page
+
+
+
+

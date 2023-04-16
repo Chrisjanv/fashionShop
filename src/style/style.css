@@ -1,5 +1,5 @@
 /* GENERAL */
-*{
+* {
     font-family: 'Roboto', sans-serif !important;
     box-sizing: border-box;
 }
@@ -9,26 +9,32 @@ html {
     margin: auto;
 }
 
-.header, .main{
+.header,
+.main {
     margin-left: 1rem;
     margin-right: 1rem;
 }
 
-.header{
+.header {
     margin-bottom: 3rem;
     margin-top: 3rem;
 }
 
-.footer{
-    margin-top: 3rem;
-    margin-bottom: 4rem;
+.footer {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* FOOTER */
-.socialPNG{
+.socialPNG {
     max-width: 50px;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+}
+
+footer>div>a>img:hover {
+    transform: scale(1.1);
+    transition: transform 300ms ease-in-out;
 }
 
 /* BUTTONS */
@@ -43,15 +49,15 @@ html {
 }
 
 /* INDEX */
-.coverImg{
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+.coverImg {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* GALLERY */
 main>div>div>div>img:hover {
     transform: scale(1.1);
-    transition: transform 500ms ease-in-out ;
+    transition: transform 500ms ease-in-out;
 }
 
 main>div>div>div>img {
@@ -61,5 +67,3 @@ main>div>div>div>img {
 
 /* on hover mouse must change pointers */
 /* zoom to 102% */
-
-
