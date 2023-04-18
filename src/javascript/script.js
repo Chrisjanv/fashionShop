@@ -8,13 +8,13 @@ topButton.addEventListener("click", function () {
 });
 
 // Contact form
-function submitContactForm() {
-    let name = document.getElementById("name");
-    let email = document.getElementById("email");
-    let message = document.getElementById("message");
-    
-    
-}
+const form = document.getElementById('ContactForm');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // Anything needed for the form
+});
+
 
 // Shop
 fetch('/src/json/clothing.json')
