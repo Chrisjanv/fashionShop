@@ -33,7 +33,7 @@ html {
 }
 
 footer>div>a>img:hover {
-    transform: scale(1.1);
+    transform: scale(1.02);
     transition: transform 300ms ease-in-out;
 }
 
@@ -56,7 +56,7 @@ footer>div>a>img:hover {
 
 /* GALLERY */
 main>div>div>div>img:hover {
-    transform: scale(1.1);
+    transform: scale(1.02);
     transition: transform 500ms ease-in-out;
 }
 
