@@ -60,6 +60,10 @@ fetch('/src/json/clothing.json')
             buyBtn.classList.add('btn');
             buyBtn.textContent = 'Buy';
             itemDiv.appendChild(buyBtn);
+
+            buyBtn.addEventListener('click', () => {
+                addToCart(item);
+            });
             
 
             // add the item to the shopPage
@@ -70,6 +74,8 @@ fetch('/src/json/clothing.json')
 
     .catch(error => {
         console.error('Error fetching JSON data: ', error);
+
 });
 
-
+// Add to cart function
+// function addToCart(item) {}
