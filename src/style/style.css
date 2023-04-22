@@ -59,11 +59,9 @@ main>div>div>div>img:hover {
     transform: scale(1.02);
     transition: transform 500ms ease-in-out;
 }
-
+/* on hover mouse must change pointers */
+/* zoom to 102% */
 main>div>div>div>img {
     border: none !important;
     cursor: pointer;
 }
-
-/* on hover mouse must change pointers */
-/* zoom to 102% */
