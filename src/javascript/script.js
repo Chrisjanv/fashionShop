@@ -34,7 +34,8 @@ fetch('/src/json/clothing.json')
             // create a div to hold the item
             const itemDiv = document.createElement('div');
             itemDiv.classList.add('item');
-            itemDiv.classList.add('col-md-6');
+            itemDiv.classList.add('col-3');
+            itemDiv.classList.add('col-m-12');
 
             // create an image element for the item
             const image = document.createElement('img');
