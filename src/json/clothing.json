@@ -1,14 +1,14 @@
 {
     "clothing": [
         {
+            "name": "Women's Tank Top",
+            "price": 15.99,
+            "image": "/src/images/shop/womansTankTop.jpg"
+        },
+        {
             "name": "Men's T-Shirt",
             "price": 20.99,
             "image": "/src/images/shop/mensTShirt.jpg"
-        },
-        {
-            "name": "Men's Jeans",
-            "price": 39.99,
-            "image": "/src/images/shop/mensJeans.jpg"
         },
         {
             "name": "Men's Hoodie",
@@ -16,9 +16,9 @@
             "image": "/src/images/shop/mensHoodie.jpg"
         },
         {
-            "name": "Women's Tank Top",
-            "price": 15.99,
-            "image": "/src/images/shop/womansTankTop.jpg"
+            "name": "Men's Jeans",
+            "price": 39.99,
+            "image": "/src/images/shop/mensJeans.jpg"
         },
         {
             "name": "Women's Skirt",
@@ -32,4 +32,3 @@
         }
     ]
 }
-

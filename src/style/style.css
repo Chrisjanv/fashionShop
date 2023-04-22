@@ -36,6 +36,9 @@ footer>div>a>img:hover {
     transform: scale(1.02);
     transition: transform 300ms ease-in-out;
 }
+.footer{
+    margin-bottom: 3rem;
+}
 
 /* BUTTONS */
 .btn {
@@ -64,4 +67,14 @@ main>div>div>div>img:hover {
 main>div>div>div>img {
     border: none !important;
     cursor: pointer;
+}
+
+/* Shop */
+.shopDisplay{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 1rem !important;
+    text-align: center;
+    align-items: center;
 }

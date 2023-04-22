@@ -24,19 +24,23 @@ fetch('/src/json/clothing.json')
         let itemsForSale = [];
         itemsForSale = data;
         console.log(itemsForSale);
-
+        let shopPage = document.getElementById('shopPage');
+        
         // loop through the clothing items and create elements for each item
         data.clothing.forEach(item => {
+
+            shopPage.classList.add('row');
+
             // create a div to hold the item
             const itemDiv = document.createElement('div');
             itemDiv.classList.add('item');
+            itemDiv.classList.add('col-md-6');
 
             // create an image element for the item
             const image = document.createElement('img');
             image.src = item.image;
             image.alt = item.name;
-            image.width = 300;
-            image.classList.add('img-thumbnail');
+            image.classList.add('img-fluid');
             itemDiv.appendChild(image);
 
             // create a heading element for the item name
@@ -46,11 +50,12 @@ fetch('/src/json/clothing.json')
 
             // create a paragraph element for the item price
             const price = document.createElement('p');
-            price.textContent = '$' + item.price.toFixed(2);
+            price.textContent = 'R' + item.price.toFixed(2);
             itemDiv.appendChild(price);
 
             // add the item to the shopPage
             shopPage.appendChild(itemDiv);
+            
         });
     })
 
