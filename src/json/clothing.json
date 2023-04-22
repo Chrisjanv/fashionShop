@@ -2,51 +2,33 @@
     "clothing": [
         {
             "name": "Men's T-Shirt",
-            "type": "Shirt",
-            "gender": "Male",
-            "color": "Red",
-            "size": "L",
-            "price": 20.99
+            "price": 20.99,
+            "image": "/src/images/shop/mensTShirt.jpg"
         },
         {
             "name": "Men's Jeans",
-            "type": "Pants",
-            "gender": "Male",
-            "color": "Blue",
-            "size": "L",
-            "price": 39.99
+            "price": 39.99,
+            "image": "/src/images/shop/mensJeans.jpg"
         },
         {
             "name": "Men's Hoodie",
-            "type": "Sweatshirt",
-            "gender": "Male",
-            "color": "Black",
-            "size": "M",
-            "price": 49.99
+            "price": 49.99,
+            "image": "/src/images/shop/mensHoodie.jpg"
         },
         {
             "name": "Women's Tank Top",
-            "type": "Shirt",
-            "gender": "Female",
-            "color": "Yellow",
-            "size": "S",
-            "price": 15.99
+            "price": 15.99,
+            "image": "/src/images/shop/womansTankTop.jpg"
         },
         {
             "name": "Women's Skirt",
-            "type": "Skirt",
-            "gender": "Female",
-            "color": "Green",
-            "size": "M",
-            "price": 29.99
+            "price": 29.99,
+            "image": "/src/images/shop/womansSkirt.jpg"
         },
         {
             "name": "Women's Dress",
-            "type": "Dress",
-            "gender": "Female",
-            "color": "Purple",
-            "size": "L",
-            "price": 59.99
+            "price": 59.99,
+            "image": "/src/images/shop/womansDress.jpeg"
         }
     ]
 }

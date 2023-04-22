@@ -25,7 +25,10 @@ fetch('/src/json/clothing.json')
     })
     .catch(error => {
         console.error('Error fetching JSON data: ', error);
-    });
+});
+
+
+
 
 // gallery
 
