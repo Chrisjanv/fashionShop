@@ -62,7 +62,7 @@ fetch('/src/json/clothing.json')
             itemDiv.appendChild(buyBtn);
 
             buyBtn.addEventListener('click', () => {
-                addToCart(item);
+                addToCart();
             });
             
 
@@ -78,4 +78,6 @@ fetch('/src/json/clothing.json')
 });
 
 // Add to cart function
-// function addToCart(item) {}
+ function addToCart() {
+    alert('Add to cart function');
+ }
