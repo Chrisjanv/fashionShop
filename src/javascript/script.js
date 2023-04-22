@@ -15,8 +15,10 @@ topButton.addEventListener("click", function () {
 //     // Anything needed for the form
 // });
 
-
 // Shop
+
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
 fetch('/src/json/clothing.json')
     .then(response => response.json())
     .then(data => {
