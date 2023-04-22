@@ -5,7 +5,7 @@
 }
 
 html {
-    max-width: 1000px;
+    /* max-width: 1000px; */
     margin: auto;
 }
 
@@ -48,6 +48,11 @@ footer>div>a>img:hover {
 #topButton {
     position: fixed;
     bottom: 20px;
+    right: 20px;
+}
+#cart{
+    position: fixed;
+    top: 90px;
     right: 20px;
 }
 
