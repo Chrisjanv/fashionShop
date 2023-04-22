@@ -75,6 +75,10 @@ main>div>div>div>img {
     justify-content: space-around;
     flex-direction: row;
     margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
     text-align: center;
     align-items: center;
+}
+.item{
+    margin: 1rem !important;
 }

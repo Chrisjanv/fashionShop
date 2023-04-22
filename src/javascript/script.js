@@ -53,6 +53,12 @@ fetch('/src/json/clothing.json')
             price.textContent = 'R' + item.price.toFixed(2);
             itemDiv.appendChild(price);
 
+            const buyBtn = document.createElement('div');
+            buyBtn.classList.add('btn');
+            buyBtn.textContent = 'Buy';
+            itemDiv.appendChild(buyBtn);
+            
+
             // add the item to the shopPage
             shopPage.appendChild(itemDiv);
             
