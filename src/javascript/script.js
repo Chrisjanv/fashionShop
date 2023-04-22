@@ -8,7 +8,7 @@ topButton.addEventListener("click", function () {
 });
 
 // Contact form
-const form = document.getElementById('ContactForm');
+// const form = document.getElementById('ContactForm');
 
 // form.addEventListener('submit', (e) => {
 //     e.preventDefault();
@@ -20,38 +20,40 @@ const form = document.getElementById('ContactForm');
 fetch('/src/json/clothing.json')
     .then(response => response.json())
     .then(data => {
-        // Do something with the JSON data
+
         let itemsForSale = [];
         itemsForSale = data;
-        console.log(data);
+        console.log(itemsForSale);
+
+        // loop through the clothing items and create elements for each item
+        data.clothing.forEach(item => {
+            // create a div to hold the item
+            const itemDiv = document.createElement('div');
+            itemDiv.classList.add('item');
+
+            // create an image element for the item
+            const image = document.createElement('img');
+            image.src = item.image;
+            image.alt = item.name;
+            image.width = 300;
+            image.classList.add('img-thumbnail');
+            itemDiv.appendChild(image);
+
+            // create a heading element for the item name
+            const name = document.createElement('h3');
+            name.textContent = item.name;
+            itemDiv.appendChild(name);
+
+            // create a paragraph element for the item price
+            const price = document.createElement('p');
+            price.textContent = '$' + item.price.toFixed(2);
+            itemDiv.appendChild(price);
+
+            // add the item to the shopPage
+            shopPage.appendChild(itemDiv);
+        });
     })
+
     .catch(error => {
         console.error('Error fetching JSON data: ', error);
 });
-
-// function listItems() {
-// for (let i = 0; i < itemsForSale.length; i++) {
-
-// }
-// }
-
-// Get a reference to the div with an ID of "shopPage"
-const shopPageDiv = document.getElementById("shopPage");
-
-// Define the HTML code you want to inject
-const html = `
-    <div class="card" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn">Go somewhere</a>
-      </div>
-    </div>
-`;
-
-// Inject the HTML code into the shopPageDiv using innerHTML
-shopPageDiv.innerHTML = html;
-
-// gallery
-
