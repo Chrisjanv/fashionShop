@@ -43,6 +43,8 @@ footer>div>a>img:hover {
 /* BUTTONS */
 .btn {
     background-color: aqua !important;
+    border: none !important;
+    color: black !important;
 }
 
 #topButton {
@@ -52,6 +54,7 @@ footer>div>a>img:hover {
 }
 #cart{
     position: fixed;
+    z-index: 9999;
     top: 90px;
     right: 20px;
 }

@@ -69,7 +69,29 @@
     </nav>
 
     <main class="main">
-        <div id="cart" class="btn">Cart</div>
+        <!-- Button trigger modal -->
+        <button id="cart" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cartModal">
+            Cart
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="cartModalHeading">Cart</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="cartBody">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary"><a href="https://www.paypal.com/za/webapps/mpp/send-money-online" target="_blank">Pay Now</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="shopPage" class="shopDisplay"> </div>
         <button class="btn" id="topButton">Top</button>
     </main>
