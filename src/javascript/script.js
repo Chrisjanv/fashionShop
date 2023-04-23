@@ -18,15 +18,17 @@ topButton.addEventListener("click", function () {
 // Shop
 
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
+let itemsForSale = [];
 fetch('/src/json/clothing.json')
     .then(response => response.json())
     .then(data => {
 
-        let itemsForSale = [];
+
         itemsForSale = data;
         console.log(itemsForSale);
         let shopPage = document.getElementById('shopPage');
+
+        let count = 0;
         
         // loop through the clothing items and create elements for each item
         data.clothing.forEach(item => {
@@ -38,6 +40,8 @@ fetch('/src/json/clothing.json')
             itemDiv.classList.add('item');
             itemDiv.classList.add('col-m-12');
             itemDiv.classList.add('col-sm-4');
+
+            itemDiv.id = 'item-' + count;
 
             // create an image element for the item
             const image = document.createElement('img');
@@ -63,12 +67,15 @@ fetch('/src/json/clothing.json')
 
             buyBtn.addEventListener('click', () => {
                 addToCart();
-            });
+            });            
             
+            console.log(count);
+            // Increase the count for unique IDs
+            count++;
 
             // add the item to the shopPage
             shopPage.appendChild(itemDiv);
-            
+                        
         });
     })
 
@@ -82,11 +89,11 @@ fetch('/src/json/clothing.json')
     alert('Add to cart function');
 }
 
-function clearCart() {}
-
-class Cart{
+class Cart {
     constructor(product, price) {
         this.product = product;
-        this.price = age;
+        this.price = price;
     }
 }
+
+function clearCart() {}
