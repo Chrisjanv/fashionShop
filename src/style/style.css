@@ -74,6 +74,14 @@ main>div>div>div>img {
     cursor: pointer;
 }
 
+/* contact */
+@media only screen and (max-width: 550px) {
+    #googleMap {
+        width: 300px;
+        height: 300px;
+    }    
+}
+
 /* Shop */
 .shopDisplay{
     display: flex;
