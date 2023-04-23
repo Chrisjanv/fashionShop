@@ -78,13 +78,6 @@ fetch('/src/json/clothing.json')
 });
 
 // Add to cart function
-class Cart {
-    constructor(product, price) {
-        this.product = name;
-        this.price = age;
-    }
-}
-
  function addToCart() {
     alert('Add to cart function');
 }
@@ -93,7 +86,7 @@ function clearCart() {}
 
 class Cart{
     constructor(product, price) {
-        this.product = name;
+        this.product = product;
         this.price = age;
     }
 }
