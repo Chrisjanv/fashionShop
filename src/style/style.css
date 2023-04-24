@@ -37,7 +37,8 @@ footer>div>a>img:hover {
     transition: transform 300ms ease-in-out;
 }
 .footer{
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    margin-top: 3rem;
 }
 
 /* BUTTONS */
