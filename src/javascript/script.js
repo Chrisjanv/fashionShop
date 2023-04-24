@@ -72,6 +72,9 @@ fetch('/src/json/clothing.json')
 
             // add the item to the shopPage
             shopPage.appendChild(itemDiv);
+
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            displayCart(cart);
                         
         });
     })
@@ -82,15 +85,15 @@ fetch('/src/json/clothing.json')
 });
 
 // CART
-class Cart {
-    constructor(product, price) {
-        this.product = product;
-        this.price = price;
-    }
-}
-
 // Add to cart function
 function addToCart(item) {
+    class Cart {
+        constructor(product, price) {
+            this.product = product;
+            this.price = price;
+        }
+    }
+
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     // create a new cart object
@@ -102,11 +105,53 @@ function addToCart(item) {
     // save the updated cart array to local storage
     localStorage.setItem('cart', JSON.stringify(cart));
 
-    // confirm the item has been added to the cart
-    alert(`${item.name} has been added to your cart!`);
+    displayCart(cart);
 }
 
 function clearCart() {
-    localStorage.removeItem('cart');
-    console.log('Cart has been cleared!');
+    if (localStorage.getItem('cart')) {
+        localStorage.removeItem('cart');
+        console.log('Cart has been cleared!');
+        displayCart([]);
+    } else {
+        console.log('Cart is already empty!');
+    }
+}
+
+function displayCart(cart) {
+    const cartBody = document.getElementById('cartBody');
+    cartBody.innerHTML = '';
+
+    if (cart.length === 0) {
+        cartBody.innerHTML = '<p>Your cart is empty.</p>';
+    } else {
+        const table = document.createElement('table');
+        table.classList.add('table');
+        table.classList.add('table-striped');
+
+        // Create table header
+        const header = document.createElement('tr');
+        const productHeader = document.createElement('th');
+        productHeader.textContent = 'Product';
+        const priceHeader = document.createElement('th');
+        priceHeader.textContent = 'Price';
+        header.appendChild(productHeader);
+        header.appendChild(priceHeader);
+        table.appendChild(header);
+
+        // Add table rows for each item in the cart
+        cart.forEach(item => {
+            const row = document.createElement('tr');
+            const product = document.createElement('td');
+            product.textContent = item.product;
+            const price = document.createElement('td');
+            price.textContent = 'R' + item.price.toFixed(2);
+            row.appendChild(product);
+            row.appendChild(price);
+            table.appendChild(row);
+        });
+
+        // Add table to the cart body
+        cartBody.appendChild(table);
+    }
 }
