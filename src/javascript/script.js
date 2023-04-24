@@ -75,6 +75,7 @@ fetch('/src/json/clothing.json')
 
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
             displayCart(cart);
+            cartAmount();
                         
         });
     })
@@ -106,6 +107,7 @@ function addToCart(item) {
     localStorage.setItem('cart', JSON.stringify(cart));
 
     displayCart(cart);
+    cartAmount();
 }
 
 function clearCart() {
@@ -113,6 +115,7 @@ function clearCart() {
         localStorage.removeItem('cart');
         console.log('Cart has been cleared!');
         displayCart([]);
+        cartAmount();
     } else {
         console.log('Cart is already empty!');
     }
@@ -154,4 +157,11 @@ function displayCart(cart) {
         // Add table to the cart body
         cartBody.appendChild(table);
     }
+}
+
+function cartAmount() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let amount = cart.length;
+    let cartAmount = document.getElementById('cart');
+    cartAmount.textContent = `Cart (${amount})`;
 }
