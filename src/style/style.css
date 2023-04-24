@@ -55,7 +55,7 @@ footer>div>a>img:hover {
 #cart{
     position: fixed;
     z-index: 9999;
-    top: 90px;
+    top: 70px;
     right: 20px;
 }
 
