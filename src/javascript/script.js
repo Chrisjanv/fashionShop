@@ -27,8 +27,6 @@ fetch('/src/json/clothing.json')
         itemsForSale = data;
         console.log(itemsForSale);
         let shopPage = document.getElementById('shopPage');
-
-        let count = 0;
         
         // loop through the clothing items and create elements for each item
         data.clothing.forEach(item => {
@@ -40,8 +38,6 @@ fetch('/src/json/clothing.json')
             itemDiv.classList.add('item');
             itemDiv.classList.add('col-m-12');
             itemDiv.classList.add('col-sm-4');
-
-            itemDiv.id = 'item-' + count;
 
             // create an image element for the item
             const image = document.createElement('img');
@@ -66,12 +62,13 @@ fetch('/src/json/clothing.json')
             itemDiv.appendChild(buyBtn);
 
             buyBtn.addEventListener('click', () => {
-                addToCart();
-            });            
-            
-            console.log(count);
-            // Increase the count for unique IDs
-            count++;
+                addToCart(item);
+            });
+
+            const clearCartButton = document.getElementById("clearCartButton");
+            clearCartButton.addEventListener('click', () => {
+                clearCart();
+            });
 
             // add the item to the shopPage
             shopPage.appendChild(itemDiv);
@@ -84,11 +81,7 @@ fetch('/src/json/clothing.json')
 
 });
 
-// Add to cart function
- function addToCart() {
-    alert('Add to cart function');
-}
-
+// CART
 class Cart {
     constructor(product, price) {
         this.product = product;
@@ -96,4 +89,24 @@ class Cart {
     }
 }
 
-function clearCart() {}
+// Add to cart function
+function addToCart(item) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // create a new cart object
+    let cartItem = new Cart(item.name, item.price);
+
+    // add the cart object to the cart array
+    cart.push(cartItem);
+
+    // save the updated cart array to local storage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // confirm the item has been added to the cart
+    alert(`${item.name} has been added to your cart!`);
+}
+
+function clearCart() {
+    localStorage.removeItem('cart');
+    console.log('Cart has been cleared!');
+}
