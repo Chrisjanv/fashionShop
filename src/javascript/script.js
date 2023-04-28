@@ -70,7 +70,7 @@ fetch('/src/json/clothing.json')
 
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
             displayCart(cart);
-            cartAmount();                        
+            cartAmount();
         });
     })
 
@@ -80,10 +80,7 @@ fetch('/src/json/clothing.json')
 });
 
 // featured products
-const featuredProducts = document.getElementById("featuredProducts");
-function displayFeaturedProducts(){
 
-}
 
 // CART
 // Add to cart function
