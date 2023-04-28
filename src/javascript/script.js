@@ -8,12 +8,49 @@ topButton.addEventListener("click", function () {
 });
 
 // Contact form
-// const form = document.getElementById('ContactForm');
+const form = document.getElementById('ContactForm');
 
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     // Anything needed for the form
-// });
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // Anything needed for the form
+    validateForm();
+});
+
+function validateForm() {
+    // Get the form inputs
+    var nameInput = document.getElementById("name");
+    var emailInput = document.getElementById("email");
+    var messageInput = document.getElementById("message");
+
+    // Check if the name input is empty
+    if (nameInput.value.trim() === "") {
+        alert("Please enter your name.");
+        return false;
+    }
+
+    // Check if the email input is empty
+    if (emailInput.value.trim() === "") {
+        alert("Please enter your email address.");
+        return false;
+    }
+
+    // Check if the email address is valid using a regular expression
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(emailInput.value)) {
+        alert("Please enter a valid email address.");
+        return false;
+    }
+
+    // Check if the message input is empty
+    if (messageInput.value.trim() === "") {
+        alert("Please enter a message.");
+        return false;
+    }
+
+    // If all the checks pass, return true to submit the form
+    return true;
+}
+
 
 // Shop
 
