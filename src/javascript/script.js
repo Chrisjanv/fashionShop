@@ -78,6 +78,11 @@ fetch('/src/json/clothing.json')
 
 });
 
+// featured products
+const featuredProducts = document.getElementById("featuredProducts");
+function displayFeaturedProducts(){
+}
+
 // CART
 // Add to cart function
 function addToCart(item) {
