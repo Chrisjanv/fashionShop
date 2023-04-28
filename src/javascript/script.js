@@ -7,8 +7,8 @@ topButton.addEventListener("click", function () {
     });
 });
 
-// // Contact form
-
+// Contact form
+// Not working as it is not connected to back end, no code needed yet.
 
 // Shop
 
