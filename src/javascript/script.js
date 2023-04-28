@@ -78,6 +78,20 @@ fetch('/src/json/clothing.json')
 
 });
 
+// Special products
+
+fetch('/src/json/clothing.json')
+    .then(response => response.json())
+    .then(data => {
+        let array = data;
+        
+
+        // ...
+    })
+    .catch(error => {
+        console.error('Error fetching JSON data: ', error);
+    });
+
 // CART
 // Add to cart function
 function addToCart(item) {
