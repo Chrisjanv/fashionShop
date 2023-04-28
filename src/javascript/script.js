@@ -81,6 +81,7 @@ fetch('/src/json/clothing.json')
 // featured products
 const featuredProducts = document.getElementById("featuredProducts");
 function displayFeaturedProducts(){
+    
 }
 
 // CART

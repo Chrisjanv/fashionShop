@@ -36,7 +36,8 @@ footer>div>a>img:hover {
     transform: scale(1.02);
     transition: transform 300ms ease-in-out;
 }
-.footer{
+
+.footer {
     margin-bottom: 4rem;
     margin-top: 3rem;
 }
@@ -46,6 +47,12 @@ footer>div>a>img:hover {
     background-color: aqua !important;
     border: none !important;
     color: black !important;
+
+}
+
+.btn:hover {
+    transform: scale(1.02);
+    transition: transform 500ms ease-in-out;
 }
 
 #topButton {
@@ -53,7 +60,8 @@ footer>div>a>img:hover {
     bottom: 20px;
     right: 20px;
 }
-#cart{
+
+#cart {
     position: fixed;
     z-index: 9999;
     bottom: 70px;
@@ -71,6 +79,7 @@ main>div>div>div>img:hover {
     transform: scale(1.02);
     transition: transform 500ms ease-in-out;
 }
+
 /* on hover mouse must change pointers */
 /* zoom to 102% */
 main>div>div>div>img {
@@ -83,11 +92,11 @@ main>div>div>div>img {
     #googleMap {
         width: 300px;
         height: 300px;
-    }    
+    }
 }
 
 /* Shop */
-.shopDisplay{
+.shopDisplay {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
@@ -96,6 +105,7 @@ main>div>div>div>img {
     text-align: center;
     align-items: center;
 }
-.item{
+
+.item {
     margin: 1rem !important;
 }
