@@ -21,9 +21,8 @@ fetch('/src/json/clothing.json')
         itemsForSale = data;
         console.log(itemsForSale);
         let shopPage = document.getElementById('shopPage');
-
+        
         // loop through the clothing items and create elements for each item
-        // Could of written a separate function to call here, but wanted to try this.
         data.clothing.forEach(item => {
 
             shopPage.classList.add('row');
@@ -70,16 +69,20 @@ fetch('/src/json/clothing.json')
 
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
             displayCart(cart);
-            cartAmount();
-
+            cartAmount();                        
         });
     })
 
     .catch(error => {
         console.error('Error fetching JSON data: ', error);
 
-    });
+});
 
+// featured products
+const featuredProducts = document.getElementById("featuredProducts");
+function displayFeaturedProducts(){
+    
+}
 
 // CART
 // Add to cart function
