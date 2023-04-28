@@ -23,7 +23,6 @@ fetch('/src/json/clothing.json')
     .then(response => response.json())
     .then(data => {
 
-
         itemsForSale = data;
         console.log(itemsForSale);
         let shopPage = document.getElementById('shopPage');
@@ -75,8 +74,7 @@ fetch('/src/json/clothing.json')
 
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
             displayCart(cart);
-            cartAmount();
-                        
+            cartAmount();                        
         });
     })
 
@@ -165,3 +163,65 @@ function cartAmount() {
     let cartAmount = document.getElementById('cart');
     cartAmount.textContent = `Cart (${amount})`;
 }
+
+// Gallery (Very long way, but works)
+const image1 = document.getElementById('galleryImage1');
+const image2 = document.getElementById('galleryImage2');
+const image3 = document.getElementById('galleryImage3');
+const image4 = document.getElementById('galleryImage4');
+const image5 = document.getElementById('galleryImage5');
+const image6 = document.getElementById('galleryImage6');
+
+function fullScreen(image) {
+    var fullscreenImage = document.createElement('img');
+    fullscreenImage.src = image.src;
+
+    var fullscreenDiv = document.createElement('div');
+    fullscreenDiv.style.position = 'fixed';
+    fullscreenDiv.style.top = '0';
+    fullscreenDiv.style.left = '0';
+    fullscreenDiv.style.width = '100%';
+    fullscreenDiv.style.height = '100%';
+    fullscreenDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+    fullscreenDiv.style.zIndex = '9999';
+    fullscreenDiv.style.display = 'flex';
+    fullscreenDiv.style.justifyContent = 'center';
+    fullscreenDiv.style.alignItems = 'center';
+    fullscreenDiv.appendChild(fullscreenImage);
+
+    var exitButton = document.createElement('button');
+    exitButton.innerHTML = 'X';
+    exitButton.style.position = 'absolute';
+    exitButton.style.top = '10px';
+    exitButton.style.right = '10px';
+    exitButton.style.backgroundColor = 'transparent';
+    exitButton.style.border = 'none';
+    exitButton.style.color = '#fff';
+    exitButton.style.fontSize = '24px';
+    exitButton.style.cursor = 'pointer';
+    exitButton.addEventListener('click', function () {
+        document.body.removeChild(fullscreenDiv);
+    });
+    fullscreenDiv.appendChild(exitButton);
+
+    document.body.appendChild(fullscreenDiv);
+}
+image1.addEventListener('click', function () {
+    fullScreen(image1);
+});
+image2.addEventListener('click', function () {
+    fullScreen(image2);
+});
+image3.addEventListener('click', function () {
+    fullScreen(image3);
+});
+image4.addEventListener('click', function () {
+    fullScreen(image4);
+});
+image5.addEventListener('click', function () {
+    fullScreen(image5);
+});
+image6.addEventListener('click', function () {
+    fullScreen(image6);
+});
+
