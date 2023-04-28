@@ -23,6 +23,7 @@ fetch('/src/json/clothing.json')
         let shopPage = document.getElementById('shopPage');
         
         // loop through the clothing items and create elements for each item
+        // Could of written a separate function to call here, but wanted to try this.
         data.clothing.forEach(item => {
 
             shopPage.classList.add('row');
@@ -81,7 +82,7 @@ fetch('/src/json/clothing.json')
 // featured products
 const featuredProducts = document.getElementById("featuredProducts");
 function displayFeaturedProducts(){
-    
+
 }
 
 // CART
