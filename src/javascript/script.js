@@ -7,49 +7,7 @@ topButton.addEventListener("click", function () {
     });
 });
 
-// Contact form
-const form = document.getElementById('ContactForm');
-
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    // Anything needed for the form
-    validateForm();
-});
-
-function validateForm() {
-    // Get the form inputs
-    var nameInput = document.getElementById("name");
-    var emailInput = document.getElementById("email");
-    var messageInput = document.getElementById("message");
-
-    // Check if the name input is empty
-    if (nameInput.value.trim() === "") {
-        alert("Please enter your name.");
-        return false;
-    }
-
-    // Check if the email input is empty
-    if (emailInput.value.trim() === "") {
-        alert("Please enter your email address.");
-        return false;
-    }
-
-    // Check if the email address is valid using a regular expression
-    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(emailInput.value)) {
-        alert("Please enter a valid email address.");
-        return false;
-    }
-
-    // Check if the message input is empty
-    if (messageInput.value.trim() === "") {
-        alert("Please enter a message.");
-        return false;
-    }
-
-    // If all the checks pass, return true to submit the form
-    return true;
-}
+// // Contact form
 
 
 // Shop
@@ -210,10 +168,10 @@ const image5 = document.getElementById('galleryImage5');
 const image6 = document.getElementById('galleryImage6');
 
 function fullScreen(image) {
-    var fullscreenImage = document.createElement('img');
+    let fullscreenImage = document.createElement('img');
     fullscreenImage.src = image.src;
 
-    var fullscreenDiv = document.createElement('div');
+    let fullscreenDiv = document.createElement('div');
     fullscreenDiv.style.position = 'fixed';
     fullscreenDiv.style.top = '0';
     fullscreenDiv.style.left = '0';
@@ -226,7 +184,7 @@ function fullScreen(image) {
     fullscreenDiv.style.alignItems = 'center';
     fullscreenDiv.appendChild(fullscreenImage);
 
-    var exitButton = document.createElement('button');
+    let exitButton = document.createElement('button');
     exitButton.innerHTML = 'X';
     exitButton.style.position = 'absolute';
     exitButton.style.top = '10px';
