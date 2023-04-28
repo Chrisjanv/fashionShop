@@ -71,6 +71,7 @@ fetch('/src/json/clothing.json')
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
             displayCart(cart);
             cartAmount();
+
         });
     })
 
