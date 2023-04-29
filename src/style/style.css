@@ -85,6 +85,13 @@ main>div>div>div>img {
         height: 300px;
     }    
 }
+@media  only screen and (min-width:700px){
+.contactForm {
+    margin-left: 7rem;
+    margin-right: 7rem;
+}
+    
+}
 
 /* Shop */
 .shopDisplay{
